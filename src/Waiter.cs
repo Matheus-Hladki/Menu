@@ -28,7 +28,7 @@ namespace Ucu.Poo.Restaurant
 
         public void TakeOrder(Table table, Dish dish)
         {
-            table.AddOrder(dish);
+            table.AddToOrder(dish);
 
         }
     }

@@ -27,7 +27,7 @@ namespace Ucu.Poo.Restaurant
         {
             foreach (Dish dish in dishes)
             {
-                if (dish.name == name)
+                if (dish.Name == name)
                     return dish;
             }
 
