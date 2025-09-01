@@ -19,7 +19,7 @@ namespace Ucu.Poo.Restaurant.Tests
         {
             Table table = new Table(1);
 
-            table.Ocupy();
+            table.Occupy();
 
             Assert.That(table.IsOccupied, Is.True);
         }
