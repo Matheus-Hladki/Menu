@@ -10,7 +10,15 @@ namespace Ucu.Poo.Restaurant
     {
         private List<Dish> order = new List<Dish>();
         private bool IsOccupied;
+        public bool isOccupied
+        {
+            get { return IsOccupied; } 
+        }
         private int Number;
+        public int number
+        {
+            get { return Number; } 
+        }
         
         public void Occupy()
         {
@@ -32,7 +40,10 @@ namespace Ucu.Poo.Restaurant
         {
             return this.order.Count > 0;
         }
-        
-        
+
+        public Table(int number)
+        {
+            this.Number = number;
+        }
     }
 }

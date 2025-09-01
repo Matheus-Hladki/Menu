@@ -11,7 +11,7 @@ namespace Ucu.Poo.Restaurant.Tests
             const int number = 1;
             Table table = new Table(number);
 
-            Assert.That(table.Number, Is.EqualTo(number));
+            Assert.That(table.number, Is.EqualTo(number));
         }
 
         [Test]
@@ -19,9 +19,9 @@ namespace Ucu.Poo.Restaurant.Tests
         {
             Table table = new Table(1);
 
-            table.Ocupy();
+            table.Occupy();
 
-            Assert.That(table.IsOccupied, Is.True);
+            Assert.That(table.isOccupied, Is.True);
         }
 
         [Test]
@@ -36,7 +36,7 @@ namespace Ucu.Poo.Restaurant.Tests
         public void HasOrders_AfterAddOrder_ReturnsTrue()
         {
             Table table = new Table(1);
-            table.Ocupy();
+            table.Occupy();
             Dish dish = new Dish("Salad", 5.99, true);
 
             table.AddToOrder(dish);
@@ -48,13 +48,13 @@ namespace Ucu.Poo.Restaurant.Tests
         public void Free_WithOccupiedTable_SetsIsOccupiedToFalseAndEmptiesOrder()
         {
             Table table = new Table(1);
-            table.Ocupy();
+            table.Occupy();
             Dish dish = new Dish("Salad", 5.99, true);
             table.AddToOrder(dish);
 
             table.Free();
 
-            Assert.That(table.IsOccupied, Is.False);
+            Assert.That(table.isOccupied, Is.False);
             Assert.That(table.HasOrders(), Is.False);
         }
     }
